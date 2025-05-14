@@ -1,7 +1,7 @@
 #!/data/data/com.termux/files/usr/bin/bash -e
 
 VERSION=2024091801
-BASE_URL=https://image-nethunter.kali.org/nethunter-fs/kali-2025.1/
+BASE_URL=https://image-nethunter.kali.org/nethunter-fs/kali-2025.1/kali-nethunter-2025.1-rootfs-full-armhf.tar.xz
 USERNAME=kali
 
 
