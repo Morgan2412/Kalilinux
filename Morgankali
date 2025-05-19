@@ -105,7 +105,7 @@ function set_strings() {
 
     CHROOT=kali-${SYS_ARCH}
     IMAGE_NAME=kali-nethunter-2025.1-rootfs-${wimg}-${SYS_ARCH}.tar.xz
-    SHA_NAME=${IMAGE_NAME}.sha512sum
+    SHA_NAME=${IMAGE_NAME}.sha256sum
 }    
 
 function prepare_fs() {
@@ -186,7 +186,7 @@ function verify_sha() {
     if [ -z $KEEP_IMAGE ]; then
         printf "\n${blue}[*] Verifying integrity of rootfs...${reset}\n\n"
         if [ -f "${SHA_NAME}" ]; then
-            sha512sum -c "$SHA_NAME" || {
+            sha256sum -c "$SHA_NAME" || {
                 printf "${red} Rootfs corrupted. Please run this installer again or download the file manually\n${reset}"
                 exit 1
             }
